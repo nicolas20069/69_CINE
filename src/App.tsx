@@ -11,7 +11,11 @@ interface Movie {
 
 function App() {
   const [movies] = useState<Movie[]>([
-    { title: 'Spider-Man: No Way Home', year: 2021, genero: 'Acción, Fantasia', director: 'Jon Watts', image: 'https://www.mubis.es/media/articles/31403/305111/spider-man-no-way-home-vuelve-a-los-cines-con-escenas-ineditas-original.jpg' },
+    { title: 'Spider-Man: No Way Home', 
+      year: 2021, 
+      genero: 'Acción, Fantasia', 
+      director: 'Jon Watts', 
+      image: 'https://www.mubis.es/media/articles/31403/305111/spider-man-no-way-home-vuelve-a-los-cines-con-escenas-ineditas-original.jpg' },
     {
       title: 'Barbie',
       year: 2023,
@@ -104,8 +108,7 @@ function App() {
       </div>
       <div className="content">
         <header>
-          <h2><strong>Welcome to 69 CINE</strong></h2>
-          <h3>69 CINE | ENTRADAS</h3>
+          <h3> CINE | ENTRADAS</h3>
           <aside>
             <form onSubmit={filterMovies}>
               <label htmlFor="search-input">Search:</label>

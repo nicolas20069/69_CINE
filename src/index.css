@@ -2,18 +2,18 @@
    VARIABLES CSS - Personalización fácil
    */
 :root {
-    --primary-dark: #0a0e27;
-    --primary-blue: #063db4;
-    --accent-blue: #0052cc;
-    --card-bg: #ffffff;
-    --text-light: #f5f5f5;
-    --text-dark: #0b0b0b;
-    --text-secondary: #061e65;
-    --border-radius: 18px;
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary-dark: #102298; /* Fondo principal */
+    --primary-blue: #063db4; /* Color principal para botones y acentos */
+    --accent-blue: #7feff5d5; /* Color secundario para hover y detalles */
+    --card-bg: #ffffff; /* Fondo de las tarjetas de película */
+    --text-light: #f5f5f5; /* Texto claro para contraste */
+    --text-dark: #0b0b0b; /* Texto oscuro para detalles */
+    --text-secondary: #031344; /* Texto secundario para títulos */
+    --border-radius: 15px; /* Bordes redondeados para tarjetas y botones */
+    --shadow-sm: 0 4px 6px rgb(9, 185, 225); /* Sombra suave para elementos pequeños */
+    --shadow-md: 0 10px 25px rgba(0, 213, 251, 0.998); /* Sombra media para tarjetas */
+    --shadow-lg: 0 20px 50px rgba(2, 8, 67, 0.078); /* Sombra grande para hover */ 
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave para interacciones */
 }
 
 /*
@@ -26,35 +26,39 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Desplazamiento suave para anclas */
 }
 
 body {
-    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo con degradado para un look moderno */
+    background: linear-gradient(135deg, #0a0e27 0%, #0325e8 100%);
+    /* Color de texto claro para contraste */
     color: var(--text-light);
-    line-height: 1.6;
-    overflow-x: hidden;
+    /* Espaciado y legibilidad */
+    line-height: 1.4;
+    overflow-x: hidden; /* Evita scroll horizontal por sombras o transformaciones */
 }
 
 /* 
    CONTENEDOR PRINCIPAL */
 .title {
     text-align: center;
-    padding: 40px 20px 20px;
-    background: linear-gradient(180deg, #063db4 0%, #0a0e27 100%);
+    padding: 30px 20px 20px;
+    background: linear-gradient(180deg, #0942bf 10%, #090034 94%);
     box-shadow: var(--shadow-lg);
 }
 
 .title h1 {
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(3.5rem, 8vw, 4rem);
     color: var(--text-light);
-    font-weight: 800;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 1200;
+    letter-spacing: 2px;
+    text-shadow: 4px 2px 2.5px rgba(244, 244, 244, 0.393);
     margin: 0;
 }
 
+/* Contenedor para el contenido principal */
 .content {
     min-height: 100vh;
     background-color: var(--primary-dark);
@@ -69,7 +73,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: #050304;
+    background:linear-gradient(180deg, #090034 10%, #0942bf 94%);
     color: var(--text-light);
     padding: 30px 20px;
     box-shadow: var(--shadow-md);
@@ -85,7 +89,7 @@ header h2 {
 header h3 {
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin: 0;
-    color: var(--primary-blue);
+    color: var(--primary-black);
     font-weight: 500;
 }
 
@@ -131,7 +135,7 @@ aside input {
 }
 
 aside input::placeholder {
-    color: #888;
+    color: #898888;
 }
 
 aside input:focus {
@@ -142,7 +146,7 @@ aside input:focus {
 }
 
 aside button {
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    background: linear-gradient(150deg, var(--primary-blue), var(--accent-blue));
     color: white;
     min-width: 120px;
 }
@@ -164,7 +168,7 @@ nav {
     justify-content: center;
     gap: 15px;
     padding: 25px 20px;
-    background: linear-gradient(180deg, #063db4 0%, #052a8a 100%);
+    background: linear-gradient(280deg, #063db4 0%, #052a8a 100%);
     flex-wrap: wrap;
     box-shadow: var(--shadow-md);
 }
@@ -177,7 +181,7 @@ nav button {
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 800;
     transition: var(--transition);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -186,12 +190,12 @@ nav button {
 nav button:hover {
     background-color: var(--text-light);
     color: var(--primary-blue);
-    transform: translateY(-3px);
+    transform: translateY(-3px); scale: 1.05;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 nav button:active {
-    transform: translateY(-1px);
+    transform: translateY(-13px); /* Efecto de clic más sutil */
 }
 
 /*
